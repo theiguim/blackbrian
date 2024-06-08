@@ -1,0 +1,585 @@
+@font-face {
+    font-family: 'Christmas Squad';
+    src: url('fonts/Christmas Squad - Personal Use.otf') format('opentype');
+    /*  font-family: 'Christmas Squad', sans-serif; */
+}
+*{
+    padding: 0;
+    margin: 0;
+    /* background-color: rgb(17, 17, 17); */
+    /* color: rgb(37, 37, 37); */
+    font-family: sans-serif;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+ /* background-color: rgb(163, 113, 113); */
+     background-color: rgb(17, 17, 17);
+}
+
+#main{
+height: 85vh;
+position: relative;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: content-box;
+}
+#main .menu{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    /* background-color: blue; */
+    height: 100%;
+    /* width: 15vw; */
+    color: white; 
+    z-index: 100;
+
+    font-size: 18px;
+ 
+}
+
+#main .menu ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 17px;
+}
+#main .menu ul .icons{
+    width: 25px;
+    position: relative;
+}
+#main .menu ul li{
+list-style: none;
+}
+
+#main .menu ul a:hover,
+#main .menu ul a:active{
+    font-size: 23px;
+    text-shadow: 0.5px 0.5px 10px rgb(255, 255, 255);
+}
+
+#main .menu ul li a img:hover,
+#main .menu ul li a img:active{
+    width: 35px;
+    box-shadow: 1px 1px 10px  white;
+}
+.squard:hover,
+.squard:active{
+    border-radius: 30%;
+}
+.cicle:hover{
+    border-radius: 50%;
+}
+
+
+
+#header .logo{
+   width: 50px;
+}
+#img_main {
+    position: absolute;
+    right: 5px;
+    height: 80%;
+    width: 85vw;
+}
+
+#img_main img{
+   
+    height: 100%;
+    width: 100%;
+
+    /* object-fit: cover; */
+}
+
+#logoMain{
+    position: absolute;
+    top: 62%;
+    left: -5%;
+    z-index: 100;
+    width: 350px;
+}
+#logoMain img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* ___________________________________ */
+
+#catalogo{
+height: 100vh;
+position: relative;
+/* background-color: purple; */
+}
+
+/* config do carousel */
+.carousel{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+/* estou basicamente aqui manipulando o plano de FUNDO */
+.carousel .list .item{
+position: absolute;
+inset: 0 0 0 0;
+}
+
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(1px);
+}
+
+/* aqui é confit de fontes */
+.carousel .list .item .content{
+    position: absolute;
+    top: 12%;
+    width: 65vw;
+    /* max-width: 70%; */
+    left: 53%; /* CENTRALIZAR*/
+    transform: translateX(-50%);
+    /* padding-right: 30%; */
+    box-sizing: border-box;
+    color: #fff;
+    /* text-shadow: 0 5px 10px #0004; */
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+/*     
+    background-color: black;
+    height: 100; */
+
+}
+
+.carousel .list .item .content .author{
+    font-weight: bold;
+    font-size: 30px;
+    display: none;
+}
+.carousel .list .item .content .title{
+    font-family: 'Christmas Squad', sans-serif;
+    font-size: 60px;
+    text-shadow: 4px 4px 5px black;
+}
+.carousel .list .item .content .des{
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+.carousel .list .item .content .title, 
+.carousel .list .item .content .topic{
+    /* font-weight: bold; */
+    /* font-size: 1em; */
+    /* line-height: 1.5em; */
+}
+.carousel .list .item .content .topic{
+    color: orange;
+    display: none;
+}
+.carousel .list .item .content .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 3px;
+}
+.carousel .list .item .content button{
+    border: none;
+    background-color: white;
+    letter-spacing: 3px;
+    font-family: Arial;
+    font-weight: 500px;
+    color: black;
+}
+
+/* btn do meio do texto talvez vou tirar */
+.carousel .list .item .content button:nth-child(2){
+    background-color: rgba(255, 255, 255, 0.212);
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    border: 1px solid #eee;
+
+
+}
+
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+/* aqui eu estou alterando o tamanho !!!>>>>>>>!!!>>>>>!!!>>>*/
+.thumbnail .item{
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    /* aqui estou alterando o radius */
+}
+
+.thumbnail .item .content{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content .title{
+    /* font-weight: 700; */
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    font-family: 'Christmas Squad', sans-serif;
+    font-size: 30px;
+}
+
+.arrows{
+    position: absolute;
+    bottom:12%; 
+    right: 55%;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(192, 174, 174, 0.267);
+    border: none;
+    font-family: monospace;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+    z-index: 100;
+}
+
+.arrows button:hover{
+    background-color: #eee;
+    color: #555;
+
+}
+
+/* sobreposição 1 foto */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .topic,
+.carousel .list .item:nth-child(1) .des,
+.carousel .list .item:nth-child(1) .buttons{
+
+    transform: translateY(50px);
+    filter:blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.carousel .list .item:nth-child(1) .author{
+animation-delay: 1.3s;
+}
+.carousel .list .item:nth-child(1) .title{
+    animation-delay: 0.8s;
+}
+.carousel .list .item:nth-child(1) .topic{
+    animation-delay: 1.5s;
+}
+.carousel .list .item:nth-child(1) .des{
+    animation-delay: 0.9s;
+}
+.carousel .list .item:nth-child(1) .buttons{
+    animation-delay: 1.0s;
+}
+
+
+/* EFECT NEXT CLICK */
+
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage 0.5s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail .5s linear forwards;
+}
+
+@keyframes showThumbnail {
+    to{
+        width: 150px;
+    }
+}
+
+.carousel.next .thumbnail{
+    transform: translateX(150px);
+    animation: transformThumbnail .5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail {
+    to{
+        transform: translateX(0);
+    }
+    
+}
+
+/* EFFECT PREV CLICK */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+    to{
+        width: 150px;
+        height: 150px;
+        border-radius: 8px;
+        left: 50%;
+        bottom: 50px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+.carousel.prev .list .item:nth-child(2) .author,
+.carousel.prev .list .item:nth-child(2) .title,
+.carousel.prev .list .item:nth-child(2) .topic,
+.carousel.prev .list .item:nth-child(2) .des,
+.carousel.prev .list .item:nth-child(2) .buttons{
+animation: contentOut 1.5s linear 1 forwards;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter:blur(20px);
+        opacity: 0;
+    }
+}
+
+/* VOLTANDO PARA NEXT */
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events:none;
+}
+
+.time{
+    width: 0%;
+    height: 9px;
+    background-color: rgba(255, 255, 255, 0.616);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+.carousel.next .time,
+.carousel.prev .time{
+
+    width: 100%;
+    animation: timeRunning 2s linear 1 forwards;
+}
+@keyframes timeRunning{
+    to{
+        width: 0;
+    }
+    
+}
+
+#footer{
+    height: auto;
+    padding: 40px 0 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+#footer .footerImg img{
+    width: 110px;
+}
+#footer .footerContent{
+display: flex;
+align-items: start;
+width: 80vw;
+color: white;
+}
+#footer .footerContent .socials,
+#footer .footerContent .map{
+width: 50%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 10px;
+
+
+/* align-items: center; */
+}
+#footer .footerContent .socials>div{
+    display: flex;
+    gap: 5px;
+}
+#footer .footerContent .socials img{
+    width: 20px;
+} 
+#footer .footerContent .map{
+    font-size: 10px;
+}
+#footer .footerContent .map>button,
+#footer .footerContent .map>button a{
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+
+    border: none;
+    background-color: white;
+    letter-spacing: 3px;
+    font-family: Arial;
+    font-weight: 500px;
+    color: black;
+}
+
+/* #contato {
+    background-color: rgb(24, 23, 23);
+    height: 32vh;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-size: 13px;
+  }
+  #contato #map{
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: right;
+    align-content: center;
+    text-align: justify;
+    gap: 20px;
+  }
+  #contato1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #contato1>div {
+    font-size: 17px;
+  }
+  
+  #contato1 a {
+    text-decoration: none;
+    color: rgb(245, 236, 236);
+  }
+  
+  #contato1 img {
+    width: 130px;
+  }
+  
+  #contato1>div img {
+    width: 17px;
+  }
+  
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsividade LEMBRAR DE INVERTER FIRST MOBILE! */
+/* 
+@media screen and (max-width: 678px){
+    .carousel .list .item .content{
+        padding-right:0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+} */
