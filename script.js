@@ -40,3 +40,21 @@ function showSlider(type) {
         carouselDom.classList.remove("prev");
     }, timeRunning);
 }
+
+document.querySelectorAll('.pageButton').forEach(button => {
+    button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target'); // Obtém o ID do alvo do botão clicado
+        const targetPage = document.getElementById(targetId); // Obtém o elemento alvo com base no ID
+        targetPage.style.display = 'flex';
+        document.body.style.overflow = "hidden"
+    });
+});
+
+document.querySelectorAll('.closePage').forEach(button => {
+    button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target'); // Obtém o ID do alvo do botão clicado
+        const targetPage = document.getElementById(targetId); // Obtém o elemento alvo com base no ID
+        targetPage.style.display = 'none';
+        document.body.style.overflow = "auto"
+    });
+});

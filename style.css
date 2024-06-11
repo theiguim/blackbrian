@@ -183,6 +183,7 @@ inset: 0 0 0 0;
     text-shadow: 1px 1px 1px black;
     letter-spacing: 1px;
     line-height: 22px;
+    font-family: sans-serif;
 }
 .carousel .list .item .content .title, 
 .carousel .list .item .content .topic{
@@ -445,7 +446,7 @@ animation: contentOut 1.5s linear 1 forwards;
 .carousel.prev .time{
 
     width: 100%;
-    animation: timeRunning 2s linear 1 forwards;
+    animation: timeRunning 3s linear 1 forwards;
 }
 @keyframes timeRunning{
     to{
@@ -453,6 +454,102 @@ animation: contentOut 1.5s linear 1 forwards;
     }
     
 }
+
+
+/* vou precisar criar uma pág para cada descrião
+após isso, um id para cada página. 
+o display none / block será alterado pelo id pois cada uma possui txt diferente */
+
+
+
+.displayPdt{
+    z-index: 100;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.960);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    align-items:center;
+    padding: 100px 50px;
+    box-sizing: border-box;
+    font-family: sans-serif; 
+}
+
+.displayPdt>h1{
+    font-family: 'Bebas-neue', "sans-serif";
+    letter-spacing: 4px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+   font-size: 22px;
+}
+
+ /* BUG DE TAMANHO DO CONTEÚDO SCROOLING */
+#pag4 h1{
+font-size: 18px;
+}
+/* 
+#pag4_dc{
+    padding-bottom: 0px;
+}
+#pag4_dc>div{
+    padding-top: 20px;
+} */
+
+
+.d1 h3{
+    font-family: sans-serif;
+    color: white;
+    margin-top: 10px;
+   font-size: 17px;
+}
+
+.displayPdt>button{
+    border: none;
+    background-color: white;
+    letter-spacing: 3px;
+    font-family: "Bebas-neue", "Arial";
+    font-size: 15px;
+    font-weight: 500px;
+    color: black;
+    padding:10px;
+}
+.displayPdt>button>a{
+    color: black;
+}
+.closePage{
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    font-size: 30px;
+    cursor: pointer;
+}
+.displayContent{
+display: flex;
+flex-direction: column;
+align-content: space-between;
+padding-bottom: 50px;
+height: auto;
+}
+.displayContent>div{
+    padding-top: 40px;
+}
+.displayContent>div>h2{
+    font-size: 18px;
+}
+.displayContent>div>ul>li{
+    font-size: 12px;
+    padding-top: 3px;
+    color: rgb(216, 216, 216);
+    list-style: none;
+}
+
 
 #footer{
     height: auto;
@@ -498,7 +595,6 @@ gap: 10px;
     width: 100px;
     height: 40px;
     font-size: 12px;
-
     border: none;
     background-color: white;
     letter-spacing: 3px;
@@ -507,52 +603,6 @@ gap: 10px;
     color: black;
 }
 
-/* #contato {
-    background-color: rgb(24, 23, 23);
-    height: 32vh;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    font-size: 13px;
-  }
-  #contato #map{
-    width: 50%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: right;
-    align-content: center;
-    text-align: justify;
-    gap: 20px;
-  }
-  #contato1 {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  #contato1>div {
-    font-size: 17px;
-  }
-  
-  #contato1 a {
-    text-decoration: none;
-    color: rgb(245, 236, 236);
-  }
-  
-  #contato1 img {
-    width: 130px;
-  }
-  
-  #contato1>div img {
-    width: 17px;
-  }
-  
- */
 
 
 
