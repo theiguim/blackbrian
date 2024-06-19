@@ -48,7 +48,7 @@ body {
     /* background-color: blue; */
     height: 100%;
     /* width: 15vw; */
-    color: white;
+    color: #e0e0e0;
     z-index: 100;
     font-size: 15px;
 
@@ -141,7 +141,31 @@ body {
     height: 100%;
 }
 
+#about{
+    height: 40vh;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+   
+}
 
+#about>div{
+    height: 100%;
+   width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    margin: auto;
+}
+#about>div p{
+margin-bottom: 10px;
+  /* font-family: 'Bebas-neue', sans-serif;
+  font-size: 18px;
+  text-align: left; */
+font-family: sans-serif;
+color: #e0e0e0;
+
+}
 
 
 /* ___________________________________ */
@@ -182,9 +206,10 @@ body {
     left: 51%;
     /* CENTRALIZAR*/
     transform: translateX(-50%);
+    /* margin-left: -33%; */
     /* padding-right: 30%; */
     box-sizing: border-box;
-    color: #fff;
+    color: white;
     /* text-shadow: 0 5px 10px #0004; */
     display: flex;
     flex-direction: column;
@@ -208,7 +233,7 @@ body {
 }
 
 .carousel .list .item .content .des {
-    text-shadow: 1px 1px 1px black;
+    /* text-shadow: 1px 1px 1px black; */
     letter-spacing: 1px;
     line-height: 22px;
     font-family: sans-serif;
