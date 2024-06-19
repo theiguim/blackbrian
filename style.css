@@ -8,6 +8,9 @@
     font-family: 'Bebas-neue';
     src: url("fonts/BebasNeue\ Regular.otf") format('opentype');
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 * {
     padding: 0;
