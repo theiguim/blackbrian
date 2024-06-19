@@ -69,6 +69,7 @@ body {
 
 #main .menu ul li {
     font-family: "Bebas-neue", "sans-serif";
+    text-shadow: 1px 1px 2px black;
     letter-spacing: 5px;
     list-style: none;
 
@@ -143,7 +144,7 @@ body {
 
 #about{
     height: 40vh;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     margin-bottom: 10vh;
    
 }
