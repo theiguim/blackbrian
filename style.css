@@ -8,9 +8,10 @@
     font-family: 'Bebas-neue';
     src: url("fonts/BebasNeue\ Regular.otf") format('opentype');
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
 
 * {
     padding: 0;
@@ -108,15 +109,19 @@ body {
     right: 5px;
     height: 80%;
     width: 85vw;
-    overflow: hidden; /* Garante que o pseudo-elemento não extrapole os limites do div */
-    z-index: 1; /* Garante que a camada de filtro esteja atrás do vídeo */
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    overflow: hidden;
+    /* Garante que o pseudo-elemento não extrapole os limites do div */
+    z-index: 1;
+    /* Garante que a camada de filtro esteja atrás do vídeo */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Cor de fundo com transparência */
 }
 
 #img_main video {
     height: 100%;
     width: 100%;
-    object-fit: cover; /* Garante que o vídeo cubra todo o espaço disponível */
+    object-fit: cover;
+    /* Garante que o vídeo cubra todo o espaço disponível */
 }
 
 #img_main::before {
@@ -126,8 +131,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Cor de fundo com transparência */
-    z-index: 2; /* Coloca a camada de filtro sobre o vídeo */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Cor de fundo com transparência */
+    z-index: 2;
+    /* Coloca a camada de filtro sobre o vídeo */
 }
 
 
@@ -145,29 +152,30 @@ body {
     height: 100%;
 }
 
-#about{
+#about {
     height: 40vh;
     /* margin-top: 5vh; */
-    margin-bottom: 10vh;
-   
+    margin-bottom: 5vh;
+
 }
 
-#about>div{
+#about>div {
     height: 100%;
-   width: 70%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: justify;
     margin: auto;
 }
-#about>div p{
-margin-bottom: 10px;
-  /* font-family: 'Bebas-neue', sans-serif;
+
+#about>div p {
+    margin-bottom: 10px;
+    /* font-family: 'Bebas-neue', sans-serif;
   font-size: 18px;
   text-align: left; */
-font-family: sans-serif;
-color: #e0e0e0;
+    font-family: sans-serif;
+    color: #e0e0e0;
 
 }
 
@@ -224,12 +232,6 @@ color: #e0e0e0;
 
 }
 
-.carousel .list .item .content .author {
-    font-weight: bold;
-    font-size: 30px;
-    display: none;
-}
-
 .carousel .list .item .content .title {
     font-family: 'Christmas Squad', sans-serif;
     font-size: 60px;
@@ -241,18 +243,7 @@ color: #e0e0e0;
     letter-spacing: 1px;
     line-height: 22px;
     font-family: sans-serif;
-}
-
-.carousel .list .item .content .title,
-.carousel .list .item .content .topic {
-    /* font-weight: bold; */
-    /* font-size: 1em; */
-    /* line-height: 1.5em; */
-}
-
-.carousel .list .item .content .topic {
-    color: orange;
-    display: none;
+    /* font-size: 15px; */
 }
 
 .carousel .list .item .content .buttons {
@@ -359,9 +350,8 @@ color: #e0e0e0;
     z-index: 1;
 }
 
-.carousel .list .item:nth-child(1) .author,
+
 .carousel .list .item:nth-child(1) .title,
-.carousel .list .item:nth-child(1) .topic,
 .carousel .list .item:nth-child(1) .des,
 .carousel .list .item:nth-child(1) .buttons {
 
@@ -379,16 +369,9 @@ color: #e0e0e0;
     }
 }
 
-.carousel .list .item:nth-child(1) .author {
-    animation-delay: 1.3s;
-}
 
 .carousel .list .item:nth-child(1) .title {
     animation-delay: 0.8s;
-}
-
-.carousel .list .item:nth-child(1) .topic {
-    animation-delay: 1.5s;
 }
 
 .carousel .list .item:nth-child(1) .des {
@@ -653,7 +636,7 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
     box-sizing: border-box;
 }
 
-span{
+span {
     font-size: 12px;
     color: rgb(168, 168, 168);
     padding-top: 10px;
@@ -726,39 +709,485 @@ span{
     color: black;
 }
 
+/* responsividade */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* responsividade LEMBRAR DE INVERTER FIRST MOBILE! */
-/* 
-@media screen and (max-width: 678px){
-    .carousel .list .item .content{
-        padding-right:0;
+@media only screen and (min-width: 480px) and (max-width: 915px) and (orientation: landscape) {
+    #img_main {
+        width: 50vw;
     }
-    .carousel .list .item .content .title{
+
+    #logoMain {
+        top: 35%;
+        left: 10%;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 5%;
+    }
+
+    #about {
+        height: 80vh;
+    }
+
+    #about>div {
+        width: 50%;
+    }
+
+    .carousel .list .item .content {
+        top: 10%;
+        width: 65vw;
+        left: 40%;
+    }
+
+    .carousel .list .item .content .des {
+        letter-spacing: 1px;
+        line-height: 10px;
+        font-size: 10px
+    }
+
+    .thumbnail {
+        bottom: 20px;
+    }
+
+    .thumbnail .item {
+        width: 125px;
+        height: 125px;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 25px;
+    }
+
+    .arrows {
+        bottom: 8%;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 125px;
+            height: 125px;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 20px;
+        }
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        color: white;
+        gap: 100px;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    #img_main {
+        width: 70vw;
+    }
+
+    #logoMain {
+        top: 55%;
+        left: 0.5%;
+        width: 70%;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 10%;
+    }
+    #main .menu ul .icons {
+        width: 22px;
+    }
+
+    #main .menu ul li {
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+
+    #about {
+        margin-top: -5vh;
+        height: 30vh;
+    }
+
+    #about>div {
+        width: 50%;
+    }
+
+    #catalogo {
+        height: 80vh;
+    }
+
+    .carousel {
+        height: 80vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 53%;
+    }
+
+    .carousel .list .item .content .des {
+        font-size: 18px;
+    }
+
+    .thumbnail {
+        bottom: 50px;
+    }
+
+    .thumbnail .item {
+        width: 150px;
+        height: 250px;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 25px;
+    }
+
+    .arrows {
+        bottom: 18%;
+        left: 20%;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 155px;
+            height: 250px;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 50px;
+        }
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        color: white;
+        gap: 100px;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+
+
+
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1149px) {
+
+    #img_main {
+        width: 70vw;
+    }
+
+    #logoMain {
+        top: 50%;
+        left: 0.5%;
+        width: 70%;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 10%;
+    }
+
+    #main .menu {
+        top: 8%;
+        left: 8%;
+    }
+
+    #main .menu ul {
+        gap: 30px;
+    }
+
+    #main .menu ul .icons {
+        width: 30px;
+    }
+
+    #main .menu ul li {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+
+    #about {
+        height: 40vh;
+    }
+
+    #about>div {
+        width: 50%;
+    }
+
+    #about>div p {
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: sans-serif;
+        color: #e0e0e0;
+
+    }
+
+
+    #catalogo {
+        height: 80vh;
+        overflow-x: hidden;
+    }
+
+    .carousel {
+        height: 80vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 53%;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 100px;
+    }
+
+    .carousel .list .item .content .des {
+        line-height: 40px;
         font-size: 30px;
     }
-} */
+
+    .carousel .list .item .content .buttons {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: 60px;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .carousel .list .item .content button {
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+
+    .thumbnail .item {
+        width: 250px;
+        height: 500px;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 50px;
+    }
+
+    .arrows {
+        bottom: 18%;
+        left: 20%;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 250px;
+            height: 500px;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 50px;
+        }
+    }
+
+    @keyframes showThumbnail {
+        to {
+            width: 250px;
+        }
+    }
+
+    #footer {
+        font-size: 20px;
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        gap: 200px;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+
+    #footer .footerContent .socials img {
+        width: 30px;
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+
+    #img_main {
+        width: 49.5vw;
+    }
+
+    #logoMain {
+        top: 25%;
+        left: 10%;
+        width: 30%;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 10%;
+    }
+
+    #main .menu {
+        top: 8%;
+        left: 8%;
+    }
+
+    #main .menu ul {
+        gap: 30px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    #main .menu ul .icons {
+        width: 30px;
+    }
+
+    #main .menu ul li {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+
+    #main .menu ul a:hover {
+        font-size: 40px;
+        text-shadow: 0.5px 0.5px 10px rgb(255, 255, 255);
+    }
+    
+    #main .menu ul li a img:hover {
+        width: 60px;
+        box-shadow: 1px 1px 10px white;
+    }
+    
+    .squard:hover {
+        border-radius: 30%;
+    }
+    
+    .cicle:hover {
+        border-radius: 50%;
+    }
+
+    #about {
+        margin-top: -5vh;
+        height: 60vh;
+    }
+
+    #about>div {
+        width: 40%;
+    }
+
+    #about>div p {
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family: sans-serif;
+        color: #e0e0e0;
+
+    }
+
+
+    #catalogo {
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .carousel {
+        height: 100vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 43%;
+    }
+
+    .carousel .list .item .content .title {
+        font-size: 70px;
+    }
+
+    .carousel .list .item .content .des {
+        line-height: 30px;
+        font-size: 23px;
+        max-width: 600px;
+    }
+
+    .carousel .list .item .content .buttons {
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: 60px;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .carousel .list .item .content button {
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+
+    .thumbnail .item {
+        width: 200px;
+        height: 400px;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 50px;
+    }
+
+    .arrows {
+        bottom: 18%;
+        left: 20%;
+    }
+
+    .carousel.next .list .item:nth-child(1) img {
+        width: 150px;
+        height: 300px;
+    }
+
+
+    @keyframes outImage {
+        to {
+            width: 150px;
+            height: 300px;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 50px;
+        }
+    }
+    
+
+    @keyframes showThumbnail {
+        to {
+            width: 150px;
+        }
+    }
+
+    #footer {
+        height: 40vh;
+        font-size: 20px;
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        gap: 200px;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+    #footer .footerContent .map p{
+        font-size: 20px;
+        max-width: 300px;
+    
+    }
+
+    #footer .footerContent .socials img {
+        width: 30px;
+    }
+}
