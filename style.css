@@ -539,13 +539,13 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
     background-color: white;
     color: black;
     padding: 10px 20px;
-    font-size: 22px;
+    font-size: 5vw;
 }
 
 /* BUG DE TAMANHO DO CONTEÚDO SCROOLING */
-#pag4 h1 {
-    font-size: 18px;
-}
+/* #pag4 h1 {
+    font-size: 5vw;
+} */
 
 /* 
 #pag4_dc{
@@ -560,10 +560,10 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
     font-family: sans-serif;
     color: white;
     margin-top: 10px;
-    font-size: 17px;
+    font-size: 4vw;
 }
 
-.displayPdt>button {
+/* .displayPdt>button {
     border: none;
     background-color: white;
     letter-spacing: 3px;
@@ -572,17 +572,17 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
     font-weight: 500px;
     color: black;
     padding: 10px;
-}
+} */
 
-.displayPdt>button>a {
+/* .displayPdt>button>a {
     color: black;
-}
+} */
 
 .closePage {
-    position: absolute;
+    position: fixed;
     top: 5%;
     right: 10%;
-    font-size: 30px;
+    font-size: 4vh;
     cursor: pointer;
 }
 
@@ -595,39 +595,51 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
 }
 
 .displayContent>div {
-    padding-top: 40px;
+    padding-top: 5vh;
 }
 
 .displayContent>div>h2 {
-    font-size: 18px;
+    font-size: 4vw;
 }
 
 .displayContent>div>ul>li {
-    font-size: 12px;
-    padding-top: 3px;
+    font-size: 3vw;
+    padding-top: 2vh;
     color: rgb(216, 216, 216);
     list-style: none;
 }
 
 .displayContent>div>p {
-    font-size: 15px;
-    padding-top: 3px;
+    font-size: 3vw;
+    padding-top: 1vh;
     color: rgb(216, 216, 216);
 }
 
 .peliculas_ico {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 1vh;
 
 }
 
-.peliculas_ico p {
+.peliculas_ico p{
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 3vw;
     padding-top: 3px;
     color: rgb(216, 216, 216);
+}
+.peliculas_ico_legend p {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-top: 3%;
+}
+
+.peliculas_ico_legend p img{
+    width: 10%;
+    padding-right: 3%;
+    box-sizing: border-box;
 }
 
 .peliculas_ico p img {
@@ -637,7 +649,7 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
 }
 
 span {
-    font-size: 12px;
+    font-size: 2.5vw;
     color: rgb(168, 168, 168);
     padding-top: 10px;
 }
@@ -711,19 +723,211 @@ span {
 
 /* responsividade */
 
+/* criar responsividade XR */
+
+@media only screen and (min-width: 300px) and (max-width: 390px){
+    #about{
+        height: 60vh;
+    }
+
+    #catalogo {
+        height: 100vh;
+    }
+
+    .carousel {
+        height: 100vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 53%;
+    }
+
+    .carousel .list .item .content .title {
+       font-size: 6vh;
+    }
+
+    .carousel .list .item .content .des {
+        font-size: 1.8vh;
+        line-height: 2.2vh;
+    }
+
+    .carousel .list .item .content .buttons {
+       
+        grid-template-columns: repeat(2, 25vw);
+        grid-template-rows: 5vh;
+    }
+    
+    .carousel .list .item .content button {
+       
+        letter-spacing: 0.5vh;
+        font-size: 1.5vh;
+    }
+
+   
+    .thumbnail {
+        bottom: 5vh;
+    }
+
+    .thumbnail .item {
+        width: 20vw;
+        height: 20vh;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 3.5vw;
+    }
+
+    .arrows {
+        bottom: 10%;
+        left: 15%;
+    }
+
+    
+    @keyframes outImage {
+        to {
+            width: 20vw;
+            height: 20vh;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 5vh;
+        }
+    }
+
+    @keyframes showThumbnail {
+        to {
+            width: 20vw;
+        }
+    }
+
+
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    #img_main {
+        width: 70vw;
+    }
+
+    #logoMain {
+        top: 55%;
+        left: 0.5%;
+        width: 70vw;
+    }
+
+    #main .menu {
+        top: 15%;
+        left: 10%;
+    }
+
+    #main .menu ul .icons {
+        width: 2.5vw;
+    }
+
+    #main .menu ul li {
+        font-size: 2.5vw;
+        letter-spacing: 0.9vw;
+    }
+
+    #about {
+        margin-top: -5vh;
+        height: 30vh;
+    }
+
+    #about>div {
+        width: 50%;
+    }
+
+    #catalogo {
+        height: 80vh;
+    }
+
+    .carousel {
+        height: 80vh;
+    }
+
+    .carousel .list .item .content {
+        top: 12%;
+        left: 53%;
+    }
+
+    .carousel .list .item .content .des {
+        font-size: 2vw;
+    }
+
+    .thumbnail {
+        bottom: 5vh;
+    }
+
+    .thumbnail .item {
+        width: 20vw;
+        height: 25vh;
+    }
+
+    .thumbnail .item .content .title {
+        font-size: 3.5vw;
+    }
+
+    .arrows {
+        bottom: 18%;
+        left: 20%;
+    }
+
+    @keyframes outImage {
+        to {
+            width: 20vw;
+            height: 25vh;
+            border-radius: 8px;
+            left: 50%;
+            bottom: 5vh;
+        }
+    }
+
+    @keyframes showThumbnail {
+        to {
+            width: 20vw;
+        }
+    }
+
+    #footer .footerContent {
+        display: flex;
+        align-items: start;
+        width: 50vw;
+        color: white;
+        gap: 14vw;
+    }
+
+    #footer .footerContent .socials {
+        align-items: end;
+    }
+}
+
 @media only screen and (min-width: 480px) and (max-width: 915px) and (orientation: landscape) {
+
     #img_main {
         width: 50vw;
     }
 
     #logoMain {
-        top: 35%;
+        top: 30%;
         left: 10%;
+        width: 40vw;
     }
 
     #main .menu {
         top: 15%;
         left: 5%;
+    }
+
+    #main .menu ul .icons {
+        width: 1.8vw;
+    }
+
+    #main .menu ul li {
+        font-size: 1.8vw;
+        letter-spacing: 0.5vw;
     }
 
     #about {
@@ -732,6 +936,14 @@ span {
 
     #about>div {
         width: 50%;
+    }
+
+    #catalogo {
+        height: 100vh;
+    }
+
+    .carousel {
+        height: 100vh;
     }
 
     .carousel .list .item .content {
@@ -786,103 +998,7 @@ span {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-    #img_main {
-        width: 70vw;
-    }
-
-    #logoMain {
-        top: 55%;
-        left: 0.5%;
-        width: 70%;
-    }
-
-    #main .menu {
-        top: 15%;
-        left: 10%;
-    }
-    #main .menu ul .icons {
-        width: 22px;
-    }
-
-    #main .menu ul li {
-        font-size: 22px;
-        letter-spacing: 5px;
-    }
-
-    #about {
-        margin-top: -5vh;
-        height: 30vh;
-    }
-
-    #about>div {
-        width: 50%;
-    }
-
-    #catalogo {
-        height: 80vh;
-    }
-
-    .carousel {
-        height: 80vh;
-    }
-
-    .carousel .list .item .content {
-        top: 12%;
-        left: 53%;
-    }
-
-    .carousel .list .item .content .des {
-        font-size: 18px;
-    }
-
-    .thumbnail {
-        bottom: 50px;
-    }
-
-    .thumbnail .item {
-        width: 150px;
-        height: 250px;
-    }
-
-    .thumbnail .item .content .title {
-        font-size: 25px;
-    }
-
-    .arrows {
-        bottom: 18%;
-        left: 20%;
-    }
-
-    @keyframes outImage {
-        to {
-            width: 155px;
-            height: 250px;
-            border-radius: 8px;
-            left: 50%;
-            bottom: 50px;
-        }
-    }
-
-    #footer .footerContent {
-        display: flex;
-        align-items: start;
-        width: 50vw;
-        color: white;
-        gap: 100px;
-    }
-
-    #footer .footerContent .socials {
-        align-items: end;
-    }
-
-
-
-
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1149px) {
+@media only screen and (min-width: 1024px){
 
     #img_main {
         width: 70vw;
@@ -891,7 +1007,7 @@ span {
     #logoMain {
         top: 50%;
         left: 0.5%;
-        width: 70%;
+        width: 70vw;
     }
 
     #main .menu {
@@ -901,20 +1017,20 @@ span {
 
     #main .menu {
         top: 8%;
-        left: 8%;
+        left: 6%;
     }
 
     #main .menu ul {
-        gap: 30px;
+        gap: 3vw;
     }
 
     #main .menu ul .icons {
-        width: 30px;
+        width: 2.8vw;
     }
 
     #main .menu ul li {
-        font-size: 30px;
-        letter-spacing: 10px;
+        font-size: 2.8vw;
+        letter-spacing: 1vw;
     }
 
     #about {
@@ -926,11 +1042,8 @@ span {
     }
 
     #about>div p {
-        margin-bottom: 10px;
-        font-size: 30px;
-        font-family: sans-serif;
-        color: #e0e0e0;
-
+        margin-bottom: 1vh;
+        font-size: 2.5vw;
     }
 
 
@@ -949,33 +1062,33 @@ span {
     }
 
     .carousel .list .item .content .title {
-        font-size: 100px;
+        font-size: 8vw;
     }
 
     .carousel .list .item .content .des {
-        line-height: 40px;
-        font-size: 30px;
+        line-height: 2.8vw;
+        font-size: 2.2vw;
     }
 
     .carousel .list .item .content .buttons {
-        grid-template-columns: repeat(2, 200px);
-        grid-template-rows: 60px;
-        gap: 10px;
-        margin-top: 10px;
+        grid-template-columns: repeat(2, 15vw);
+        grid-template-rows: 4vh;
+        gap: 0.5vw;
+        margin-top: 1vh;
     }
 
     .carousel .list .item .content button {
-        letter-spacing: 5px;
-        font-size: 20px;
+        letter-spacing: 0.3vw;
+        font-size: 1.5vw;
     }
 
     .thumbnail .item {
-        width: 250px;
-        height: 500px;
+        width: 20vw;
+        height: 25vh;
     }
 
     .thumbnail .item .content .title {
-        font-size: 50px;
+        font-size: 4vw;
     }
 
     .arrows {
@@ -985,8 +1098,8 @@ span {
 
     @keyframes outImage {
         to {
-            width: 250px;
-            height: 500px;
+            width: 20vw;
+            height: 25vh;
             border-radius: 8px;
             left: 50%;
             bottom: 50px;
@@ -995,19 +1108,19 @@ span {
 
     @keyframes showThumbnail {
         to {
-            width: 250px;
+            width: 20vw;
         }
     }
 
     #footer {
-        font-size: 20px;
+        font-size: 1.8vw;
     }
 
     #footer .footerContent {
         display: flex;
         align-items: start;
         width: 50vw;
-        gap: 200px;
+        gap: 20vw;
     }
 
     #footer .footerContent .socials {
@@ -1015,11 +1128,11 @@ span {
     }
 
     #footer .footerContent .socials img {
-        width: 30px;
+        width: 3vw;
     }
 }
 
-@media only screen and (min-width: 1150px) {
+@media only screen and (min-width: 1150px){
 
     #img_main {
         width: 49.5vw;
@@ -1028,7 +1141,7 @@ span {
     #logoMain {
         top: 25%;
         left: 10%;
-        width: 30%;
+        width: 30vw;
     }
 
     #main .menu {
@@ -1042,35 +1155,35 @@ span {
     }
 
     #main .menu ul {
-        gap: 30px;
+        gap: 2vw;
         display: flex;
         flex-direction: row;
-        
+
     }
 
     #main .menu ul .icons {
-        width: 30px;
+        width: 1.3vw;
     }
 
     #main .menu ul li {
-        font-size: 30px;
-        letter-spacing: 10px;
+        font-size: 1.3vw;
+        letter-spacing: 0.5vw;
     }
 
     #main .menu ul a:hover {
-        font-size: 40px;
+        font-size: 1.7vw;
         text-shadow: 0.5px 0.5px 10px rgb(255, 255, 255);
     }
-    
+
     #main .menu ul li a img:hover {
-        width: 60px;
+        width: 2vw;
         box-shadow: 1px 1px 10px white;
     }
-    
+
     .squard:hover {
         border-radius: 30%;
     }
-    
+
     .cicle:hover {
         border-radius: 50%;
     }
@@ -1085,8 +1198,8 @@ span {
     }
 
     #about>div p {
-        margin-bottom: 10px;
-        font-size: 30px;
+        margin-bottom: 1vh;
+        font-size: 1.2vw;
         font-family: sans-serif;
         color: #e0e0e0;
 
@@ -1108,34 +1221,34 @@ span {
     }
 
     .carousel .list .item .content .title {
-        font-size: 70px;
+        font-size: 5vw;
     }
 
     .carousel .list .item .content .des {
-        line-height: 30px;
-        font-size: 23px;
-        max-width: 600px;
+        line-height: 4vh;
+        font-size: 1vw;
+        max-width: 40vw;
     }
 
     .carousel .list .item .content .buttons {
-        grid-template-columns: repeat(2, 200px);
-        grid-template-rows: 60px;
-        gap: 10px;
-        margin-top: 10px;
+        grid-template-columns: repeat(2, 7vw);
+        grid-template-rows: 6vh;
+        gap: 0.5vw;
+        margin-top: 0.8vw;
     }
 
     .carousel .list .item .content button {
-        letter-spacing: 5px;
-        font-size: 20px;
+        letter-spacing: 0.2vw;
+        font-size: 0.7vw;
     }
 
     .thumbnail .item {
-        width: 200px;
-        height: 400px;
+        width: 10vw;
+        height: 40vh;
     }
 
     .thumbnail .item .content .title {
-        font-size: 50px;
+        font-size: 2vw;
     }
 
     .arrows {
@@ -1144,50 +1257,51 @@ span {
     }
 
     .carousel.next .list .item:nth-child(1) img {
-        width: 150px;
-        height: 300px;
+        width: 10vw;
+        height: 40vh;
     }
 
 
     @keyframes outImage {
         to {
-            width: 150px;
-            height: 300px;
+            width: 10vw;
+            height: 40vh;
             border-radius: 8px;
             left: 50%;
             bottom: 50px;
         }
     }
-    
+
 
     @keyframes showThumbnail {
         to {
-            width: 150px;
+            width: 10vw;
         }
     }
 
     #footer {
         height: 40vh;
-        font-size: 20px;
+        font-size: 1vw;
     }
 
     #footer .footerContent {
         display: flex;
         align-items: start;
         width: 50vw;
-        gap: 200px;
+        gap: 20vw;
     }
 
     #footer .footerContent .socials {
         align-items: end;
     }
-    #footer .footerContent .map p{
-        font-size: 20px;
+
+    #footer .footerContent .map p {
+        font-size: 0.9vw;
         max-width: 300px;
-    
+
     }
 
     #footer .footerContent .socials img {
-        width: 30px;
+        width: 1.5vw;
     }
 }
