@@ -9,13 +9,16 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 200px;
     width: 80%;
+
+    background-color: orange;
 }
 
 .gallery-item {
-    width: 100%;
+    width: 200px;
+    height: 200px;
     cursor: pointer;
     transition: transform 0.2s;
 }
