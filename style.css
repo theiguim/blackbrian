@@ -252,6 +252,7 @@ body {
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 3px;
+   
 }
 
 .carousel .list .item .content button {
@@ -261,6 +262,7 @@ body {
     font-family: Arial;
     font-weight: 500px;
     color: black;
+    cursor: pointer;
 }
 
 /* btn do meio do texto talvez vou tirar */
@@ -323,6 +325,7 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+    
 }
 
 .arrows button {
@@ -337,6 +340,7 @@ body {
     font-size: large;
     transition: .5s;
     z-index: 100;
+    cursor: pointer;
 }
 
 .arrows button:active {
@@ -706,6 +710,7 @@ span {
 
 #footer .footerContent .map {
     font-size: 12px;
+   
 }
 
 #footer .footerContent .map>button,
@@ -719,6 +724,7 @@ span {
     font-family: Arial;
     font-weight: 500px;
     color: black;
+    cursor: pointer;
 }
 
 /* responsividade */
