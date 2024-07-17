@@ -16,8 +16,6 @@ html {
 * {
     padding: 0;
     margin: 0;
-    /* background-color: rgb(17, 17, 17); */
-    /* color: rgb(37, 37, 37); */
     color: white;
 }
 
@@ -27,8 +25,6 @@ a {
 }
 
 body {
-    /* background-color: rgb(163, 113, 113); */
-    /* background-color: rgb(17, 17, 17); */
     background-color: black;
 }
 
@@ -49,14 +45,10 @@ body {
     position: absolute;
     top: 15%;
     left: 10%;
-    /* background-color: blue; */
     height: 100%;
-    /* width: 15vw; */
     color: #e0e0e0;
     z-index: 100;
     font-size: 15px;
-
-
 }
 
 #main .menu ul {
@@ -76,10 +68,7 @@ body {
     text-shadow: 1px 1px 2px black;
     letter-spacing: 5px;
     list-style: none;
-
-
 }
-
 
 #main .menu ul a:active {
     font-size: 23px;
@@ -99,7 +88,6 @@ body {
     border-radius: 50%;
 }
 
-
 #header .logo {
     width: 50px;
 }
@@ -110,18 +98,14 @@ body {
     height: 80%;
     width: 85vw;
     overflow: hidden;
-    /* Garante que o pseudo-elemento não extrapole os limites do div */
     z-index: 1;
-    /* Garante que a camada de filtro esteja atrás do vídeo */
     background-color: rgba(0, 0, 0, 0.5);
-    /* Cor de fundo com transparência */
 }
 
 #img_main video {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    /* Garante que o vídeo cubra todo o espaço disponível */
 }
 
 #img_main::before {
@@ -132,12 +116,8 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    /* Cor de fundo com transparência */
     z-index: 2;
-    /* Coloca a camada de filtro sobre o vídeo */
 }
-
-
 
 #logoMain {
     position: absolute;
@@ -154,9 +134,7 @@ body {
 
 #about {
     height: 40vh;
-    /* margin-top: 5vh; */
     margin-bottom: 5vh;
-
 }
 
 #about>div {
@@ -171,24 +149,15 @@ body {
 
 #about>div p {
     margin-bottom: 10px;
-    /* font-family: 'Bebas-neue', sans-serif;
-  font-size: 18px;
-  text-align: left; */
     font-family: sans-serif;
     color: #e0e0e0;
-
 }
-
-
-/* ___________________________________ */
 
 #catalogo {
     height: 100vh;
     position: relative;
-    /* background-color: purple; */
 }
 
-/* config do carousel */
 .carousel {
     width: 100vw;
     height: 100vh;
@@ -196,7 +165,6 @@ body {
     position: relative;
 }
 
-/* estou basicamente aqui manipulando o plano de FUNDO */
 .carousel .list .item {
     position: absolute;
     inset: 0 0 0 0;
@@ -209,27 +177,17 @@ body {
     filter: blur(1px);
 }
 
-/* aqui é confit de fontes */
 .carousel .list .item .content {
     position: absolute;
     top: 12%;
     width: 65vw;
-    /* max-width: 70%; */
     left: 51%;
-    /* CENTRALIZAR*/
     transform: translateX(-50%);
-    /* margin-left: -33%; */
-    /* padding-right: 30%; */
     box-sizing: border-box;
     color: white;
-    /* text-shadow: 0 5px 10px #0004; */
     display: flex;
     flex-direction: column;
     gap: 28px;
-    /*     
-    background-color: black;
-    height: 100; */
-
 }
 
 .carousel .list .item .content .title {
@@ -239,11 +197,9 @@ body {
 }
 
 .carousel .list .item .content .des {
-    /* text-shadow: 1px 1px 1px black; */
     letter-spacing: 1px;
     line-height: 22px;
     font-family: sans-serif;
-    /* font-size: 15px; */
 }
 
 .carousel .list .item .content .buttons {
@@ -252,7 +208,6 @@ body {
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 3px;
-   
 }
 
 .carousel .list .item .content button {
@@ -265,14 +220,11 @@ body {
     cursor: pointer;
 }
 
-/* btn do meio do texto talvez vou tirar */
 .carousel .list .item .content button:nth-child(2) {
     background-color: rgba(255, 255, 255, 0.212);
     color: white;
     text-shadow: 1px 1px 1px black;
     border: 1px solid #eee;
-
-
 }
 
 .thumbnail {
@@ -285,7 +237,6 @@ body {
     gap: 20px;
 }
 
-/* aqui eu estou alterando o tamanho !!!>>>>>>>!!!>>>>>!!!>>>*/
 .thumbnail .item {
     width: 150px;
     height: 150px;
@@ -298,7 +249,6 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    /* aqui estou alterando o radius */
 }
 
 .thumbnail .item .content {
@@ -309,7 +259,6 @@ body {
 }
 
 .thumbnail .item .content .title {
-    /* font-weight: 700; */
     color: white;
     text-shadow: 2px 2px 3px black;
     font-family: 'Christmas Squad', sans-serif;
@@ -325,7 +274,6 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
-    
 }
 
 .arrows button {
@@ -346,10 +294,8 @@ body {
 .arrows button:active {
     background-color: #eee;
     color: #555;
-
 }
 
-/* sobreposição 1 foto */
 .carousel .list .item:nth-child(1) {
     z-index: 1;
 }
@@ -358,7 +304,6 @@ body {
 .carousel .list .item:nth-child(1) .title,
 .carousel .list .item:nth-child(1) .des,
 .carousel .list .item:nth-child(1) .buttons {
-
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
@@ -385,9 +330,6 @@ body {
 .carousel .list .item:nth-child(1) .buttons {
     animation-delay: 1.0s;
 }
-
-
-/* EFECT NEXT CLICK */
 
 .carousel.next .list .item:nth-child(1) img {
     width: 150px;
@@ -430,10 +372,7 @@ body {
     to {
         transform: translateX(0);
     }
-
 }
-
-/* EFFECT PREV CLICK */
 
 .carousel.prev .list .item:nth-child(2) {
     z-index: 2;
@@ -479,7 +418,6 @@ body {
     }
 }
 
-/* VOLTANDO PARA NEXT */
 .carousel.next .arrows button,
 .carousel.prev .arrows button {
     pointer-events: none;
@@ -497,7 +435,6 @@ body {
 
 .carousel.next .time,
 .carousel.prev .time {
-
     width: 100%;
     animation: timeRunning 3s linear 1 forwards;
 }
@@ -508,13 +445,6 @@ body {
     }
 
 }
-
-
-/* vou precisar criar uma pág para cada descrião
-após isso, um id para cada página. 
-o display none / block será alterado pelo id pois cada uma possui txt diferente */
-
-
 
 .displayPdt {
     z-index: 100;
@@ -529,7 +459,6 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
     overflow: auto;
     display: none;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     align-items: center;
     padding: 100px 50px;
     box-sizing: border-box;
@@ -546,41 +475,12 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
     font-size: 5vw;
 }
 
-/* BUG DE TAMANHO DO CONTEÚDO SCROOLING */
-/* #pag4 h1 {
-    font-size: 5vw;
-} */
-
-/* 
-#pag4_dc{
-    padding-bottom: 0px;
-}
-#pag4_dc>div{
-    padding-top: 20px;
-} */
-
-
 .d1 h3 {
     font-family: sans-serif;
     color: white;
     margin-top: 10px;
     font-size: 4vw;
 }
-
-/* .displayPdt>button {
-    border: none;
-    background-color: white;
-    letter-spacing: 3px;
-    font-family: "Bebas-neue", "Arial";
-    font-size: 15px;
-    font-weight: 500px;
-    color: black;
-    padding: 10px;
-} */
-
-/* .displayPdt>button>a {
-    color: black;
-} */
 
 .closePage {
     position: fixed;
@@ -626,13 +526,14 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
 
 }
 
-.peliculas_ico p{
+.peliculas_ico p {
     display: flex;
     align-items: center;
     font-size: 3vw;
     padding-top: 3px;
     color: rgb(216, 216, 216);
 }
+
 .peliculas_ico_legend p {
     display: flex;
     align-items: center;
@@ -640,7 +541,7 @@ o display none / block será alterado pelo id pois cada uma possui txt diferente
     margin-top: 3%;
 }
 
-.peliculas_ico_legend p img{
+.peliculas_ico_legend p img {
     width: 10%;
     padding-right: 3%;
     box-sizing: border-box;
@@ -664,10 +565,7 @@ span {
     justify-content: center;
 }
 
-
-
 #galery {
-    /* font-family: sans-serif; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -717,7 +615,7 @@ span {
     display: block;
     width: 80%;
     max-width: 700px;
-   
+
 }
 
 .closeGalery {
@@ -730,7 +628,8 @@ span {
     cursor: pointer;
 }
 
-.prevGalery, .nextGalery {
+.prevGalery,
+.nextGalery {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -754,15 +653,6 @@ span {
     right: 0;
     border-radius: 3px 3px 0 0;
 }
-
-/* .prevGalery:hover, .nextGalery:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
- */
-
-
-
-
 
 #footer {
     height: auto;
@@ -793,9 +683,6 @@ span {
     flex-direction: column;
     justify-content: center;
     gap: 15px;
-
-
-    /* align-items: center; */
 }
 
 #footer .footerContent .socials>div {
@@ -810,7 +697,7 @@ span {
 
 #footer .footerContent .map {
     font-size: 12px;
-   
+
 }
 
 #footer .footerContent .map>button,
@@ -827,12 +714,8 @@ span {
     cursor: pointer;
 }
 
-/* responsividade */
-
-/* criar responsividade XR */
-
-@media only screen and (min-width: 300px) and (max-width: 390px){
-    #about{
+@media only screen and (min-width: 300px) and (max-width: 390px) {
+    #about {
         height: 60vh;
     }
 
@@ -850,7 +733,7 @@ span {
     }
 
     .carousel .list .item .content .title {
-       font-size: 6vh;
+        font-size: 6vh;
     }
 
     .carousel .list .item .content .des {
@@ -859,18 +742,15 @@ span {
     }
 
     .carousel .list .item .content .buttons {
-       
         grid-template-columns: repeat(2, 25vw);
         grid-template-rows: 5vh;
     }
-    
+
     .carousel .list .item .content button {
-       
         letter-spacing: 0.5vh;
         font-size: 1.5vh;
     }
 
-   
     .thumbnail {
         bottom: 5vh;
     }
@@ -889,7 +769,6 @@ span {
         left: 15%;
     }
 
-    
     @keyframes outImage {
         to {
             width: 20vw;
@@ -905,10 +784,6 @@ span {
             width: 20vw;
         }
     }
-
-
-
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1003,13 +878,13 @@ span {
         gap: 50px;
         padding-left: 20px;
     }
-    
+
     .gallery-item {
         width: 150px;
         height: 150px;
     }
 
-    .closeGalery { 
+    .closeGalery {
         right: 100px;
     }
 
@@ -1120,7 +995,7 @@ span {
     }
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1024px) {
 
     #img_main {
         width: 70vw;
@@ -1234,19 +1109,18 @@ span {
         }
     }
 
-    
     .gallery {
         grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
         gap: 50px;
         padding-left: 30px;
     }
-    
+
     .gallery-item {
         width: 200px;
         height: 200px;
     }
 
-    .closeGalery { 
+    .closeGalery {
         right: 200px;
     }
 
@@ -1270,10 +1144,10 @@ span {
     }
 }
 
-@media only screen and (min-width: 1150px){
+@media only screen and (min-width: 1150px) {
 
     #img_main {
-        width: 49.5vw;
+        width: 49vw;
     }
 
     #logoMain {
@@ -1296,7 +1170,6 @@ span {
         gap: 2vw;
         display: flex;
         flex-direction: row;
-
     }
 
     #main .menu ul .icons {
@@ -1340,9 +1213,7 @@ span {
         font-size: 1.2vw;
         font-family: sans-serif;
         color: #e0e0e0;
-
     }
-
 
     #catalogo {
         height: 100vh;
@@ -1399,7 +1270,6 @@ span {
         height: 40vh;
     }
 
-
     @keyframes outImage {
         to {
             width: 10vw;
@@ -1410,13 +1280,11 @@ span {
         }
     }
 
-
     @keyframes showThumbnail {
         to {
             width: 10vw;
         }
     }
-
 
     .gallery {
         grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
@@ -1424,28 +1292,28 @@ span {
         padding-top: 10vh;
         max-width: 70vw;
     }
-    
+
     .gallery-item {
         width: 250px;
         height: auto;
     }
 
-    .prevGalery, .nextGalery {
+    .prevGalery,
+    .nextGalery {
         font-weight: 100;
         font-size: 45px;
     }
-    
+
     .prevGalery {
         left: 20vw;
     }
-    
+
     .nextGalery {
         right: 20vw;
     }
-    
-    .closeGalery { 
+
+    .closeGalery {
         right: 21vw;
-        /* top: 50px; */
         font-size: 70px;
     }
 
